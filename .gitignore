@@ -7,3 +7,4 @@ dist/
 !.env.example
 # Keep full-resolution originals local; publish only optimized, metadata-free copies.
 assets/photos/
+assets/book-illustrations/*.png

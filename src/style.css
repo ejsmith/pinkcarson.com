@@ -621,34 +621,63 @@ h2 {
   margin-top: 7px;
 }
 .story-section {
-  border-top: 1px solid var(--line);
-  padding-block: 37px 55px;
-  display: flex;
-  align-items: flex-start;
-  gap: 28px;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background: #fbe8f0;
+  padding: 42px 48px;
+  display: grid;
+  grid-template-columns: 223px minmax(0, 1fr);
+  align-items: center;
+  gap: 54px;
 }
-.story-icon {
-  padding: 17px;
-  background: #f8d9e7;
-  border-radius: 50%;
-  color: #af4474;
+.story-art {
+  margin: 0;
+  width: 100%;
+  max-width: 223px;
+  justify-self: center;
+}
+.story-art img {
+  width: 100%;
+  height: auto;
+  border: 8px solid #fffaf6;
+  border-radius: 4px;
+  box-shadow: 0 8px 20px #54384b14;
+  transform: rotate(-3deg);
+}
+.story-art figcaption {
+  margin-top: 20px;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.7;
+  text-align: center;
+}
+.story-copy .eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.story-copy .eyebrow svg {
+  width: 17px;
+  height: 17px;
   flex-shrink: 0;
 }
-.story-icon svg {
-  width: 28px;
-  height: 28px;
+.story-section h2 {
+  font-size: clamp(28px, 3vw, 40px);
+  line-height: 1.15;
+  letter-spacing: -1px;
+  margin-top: 16px;
 }
-.story-section h3 {
-  font-size: 27px;
-  letter-spacing: -0.6px;
-  margin-top: 12px;
-}
-.story-section p:not(.eyebrow) {
-  font-size: 13px;
+.story-copy > p:not(.eyebrow) {
+  font-size: 14px;
   line-height: 1.85;
   color: var(--muted);
-  margin-top: 12px;
-  max-width: 780px;
+  margin-top: 16px;
+}
+.story-copy > p.story-series {
+  font-size: 11px;
+}
+.story-link {
+  margin-top: 24px;
 }
 .portfolio-section {
   background: #ffedf4;
@@ -1773,21 +1802,19 @@ h2 {
     font-size: 10px;
   }
   .story-section {
-    gap: 18px;
-    padding-block: 25px 45px;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 30px;
+    padding: 30px 22px;
+    border-radius: 20px;
   }
-  .story-icon {
-    padding: 12px;
+  .story-art {
+    max-width: 190px;
   }
-  .story-icon svg {
-    width: 23px;
-    height: 23px;
+  .story-copy > p:not(.eyebrow) {
+    font-size: 13px;
   }
-  .story-section h3 {
-    font-size: 24px;
-  }
-  .story-section p:not(.eyebrow) {
-    font-size: 12px;
+  .story-copy > p.story-series {
+    font-size: 11px;
   }
   .story-section .eyebrow {
     font-size: 8px;

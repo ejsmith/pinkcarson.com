@@ -110,7 +110,20 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
 
     ${profile.experience.length ? `<section class="experience-section section container" aria-labelledby="experience-title"><div class="section-intro"><p class="eyebrow">MY EXPERIENCE & TRAINING</p><h2 id="experience-title">Learning the craft.<br><em>Loving the journey.</em></h2><div class="award-note">${star}<span>“${escape(profile.award.title)}”<small>${escape(profile.award.event)} · ${escape(profile.award.year)}</small></span></div><figure class="award-photo">${photoButton(profile.award.photo, profile.photos.length, "award-photo-button", "(max-width: 760px) 85vw, 460px")}<figcaption>${escape(profile.award.photo.description)}</figcaption></figure></div><div class="experience-list">${profile.experience.map((item) => `<article class="experience-item"><p class="eyebrow">${escape(item.dates)}</p><h3>${escape(item.title)}</h3><p class="organization">${escape(item.organization)}</p><p>${escape(item.description)}</p></article>`).join("")}</div><div class="competition-moments"><h3>A few moments from Groom Texas.</h3><div class="competition-photos">${profile.award.moments.map((photo, index) => `<figure>${photoButton(photo, competitionPhotoOffset + index, "competition-photo-button", "(max-width: 760px) 180px, 210px")}<figcaption>${escape(photo.title)}</figcaption></figure>`).join("")}</div></div></section>` : ""}
 
-    <aside class="story-section container" aria-labelledby="story-title"><div class="story-icon" aria-hidden="true">${heart}</div><div><p class="eyebrow">SOMETHING I’LL ALWAYS TREASURE</p><h3 id="story-title">A little story, inspired by a groom.</h3><p>One of my clients enjoyed her dog’s grooms so much that she wrote a children’s story about her dog’s grooming adventures with me. It was such a thoughtful thing to do, and it means a lot to know my work became part of that story.</p></div></aside>
+    <section class="story-section container" id="fabrice" aria-labelledby="story-title">
+      <figure class="story-art">
+        <img src="${escape(profile.book.illustration.src)}" alt="${escape(profile.book.illustration.alt)}" width="${profile.book.illustration.width}" height="${profile.book.illustration.height}" loading="lazy" decoding="async" />
+        <figcaption>Illustration from the book.<br>${escape(profile.book.illustration.credit)}</figcaption>
+      </figure>
+      <div class="story-copy">
+        <p class="eyebrow">${heart} SOMETHING I’LL ALWAYS TREASURE</p>
+        <h2 id="story-title">Fabrice’s big day,<br><em>on and off the page.</em></h2>
+        <p>Fabrice is the sweet Bichon I groomed at Groom Texas 2026, where I received the Best First Timer Award.</p>
+        <p>His owner, ${escape(profile.book.author)}, wrote <cite>${escape(profile.book.title)}</cite> about his grooming adventures. It’s a children’s story about courage, faith and confidence, and it means so much to see our time together become part of his story.</p>
+        <p class="story-series">From <cite>${escape(profile.book.series)}</cite></p>
+        <a class="button button-dark story-link" href="${escape(profile.book.url)}" target="_blank" rel="noopener noreferrer" aria-label="Find ${escape(profile.book.title)} on Amazon (opens in a new tab)">Find the book on Amazon ${arrowUp}</a>
+      </div>
+    </section>
 
     <section class="approach-section section container" id="approach" aria-labelledby="approach-title">
       <div class="section-heading"><div><p class="eyebrow">A LITTLE CARE GOES A LONG WAY</p><h2 id="approach-title">More than<br><em>a cute haircut.</em></h2></div><p>The little things I care about,<br>from the first hello to the finishing touch.</p></div>

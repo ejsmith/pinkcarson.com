@@ -68,6 +68,7 @@ The free plan currently allows 250 submissions per month. Monitor its usage in W
 - Theme and responsive layout: `src/style.css`.
 - Decorative corgi illustration: `src/illustrations.ts`.
 - Public optimized photographs: `public/images/`.
+- Fabrice book feature and Amazon link: `profile.book` in `src/content.ts`. Illustration source and extraction notes: `assets/book-illustrations/README.md`.
 
 Originals remain local in the ignored `assets/photos/` directory. Run `npm run images` where those originals are available to generate 640px and 1280px WebP copies. The script applies camera orientation and strips camera/GPS metadata without retouching the photos. GitHub builds use the already-generated web images and do not require originals.
 

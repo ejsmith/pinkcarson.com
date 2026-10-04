@@ -36,41 +36,41 @@ const award = {
   year: "2026",
   photo: {
     ...photoSources("carson-groom-texas-award", 960),
-    alt: "Groom Texas 2026 award portrait of Carson, her white competition groom and the award presenter, with a before inset and the words Best First Timer Award, All Other Purebreds, Entry Division.",
+    alt: "Groom Texas 2026 award portrait of Carson, Fabrice the white Bichon Frise and the award presenter, with a before inset and the words Best First Timer Award, All Other Purebreds, Entry Division.",
     title: "A moment I’m proud of.",
     description:
-      "Best First Timer Award at Groom Texas 2026, in the All Other Purebreds entry division. Photo: AnimalPhotography.com.",
+      "With Fabrice, my Groom Texas 2026 competition dog, after receiving the Best First Timer Award in the All Other Purebreds entry division. Photo: AnimalPhotography.com.",
   } satisfies PortfolioPhoto,
   moments: [
     {
       ...photoSources("carson-groom-texas-scissoring"),
-      alt: "Carson carefully using scissors to shape her white competition groom beneath the Groom Texas banners.",
+      alt: "Carson carefully using scissors to shape Fabrice’s white coat beneath the Groom Texas banners.",
       title: "At the grooming table.",
-      description: "Working on my competition groom at Groom Texas 2026.",
+      description: "Grooming Fabrice at Groom Texas 2026.",
     },
     {
       ...photoSources("carson-groom-texas-combing"),
-      alt: "Carson using a metal comb on the rounded head of her white competition groom.",
+      alt: "Carson using a metal comb on Fabrice’s rounded white head.",
       title: "The little details.",
-      description: "Combing through the coat at the competition table.",
+      description: "Combing through Fabrice’s coat at the competition table.",
     },
     {
       ...photoSources("carson-groom-texas-smile"),
-      alt: "Carson smiling down at her white competition groom resting on the grooming table.",
+      alt: "Carson smiling down at Fabrice resting on the grooming table.",
       title: "A little moment together.",
-      description: "With my competition groom at Groom Texas.",
+      description: "A quiet moment with Fabrice at Groom Texas.",
     },
     {
       ...photoSources("carson-groom-texas-table", 720),
-      alt: "Carson beside her white dog standing on a grooming table at Groom Texas.",
+      alt: "Carson beside Fabrice standing on a grooming table at Groom Texas.",
       title: "From competition day.",
-      description: "At the table with my groom, Groom Texas 2026.",
+      description: "At the table with Fabrice, Groom Texas 2026.",
     },
     {
       ...photoSources("carson-best-first-timer"),
-      alt: "Carson standing beside her white competition groom and holding a ribbon reading Best First Timer 2026.",
+      alt: "Carson standing beside Fabrice and holding a ribbon reading Best First Timer 2026.",
       title: "A ribbon to remember.",
-      description: "With my competition groom and the Best First Timer ribbon at Groom Texas 2026.",
+      description: "With Fabrice and the Best First Timer ribbon at Groom Texas 2026.",
     },
   ] as PortfolioPhoto[],
 };
@@ -92,6 +92,19 @@ export const profile = {
   about:
     "My grooming journey started at Hot Diggity Dog in Rowlett, Texas. Over more than two years in the shop, I’ve grown from primarily washing dogs to taking on more and more grooms. Along the way, I’ve taken grooming courses, earned a “Best First Timer” award at Groom Texas 2026, and built relationships with clients who ask for me by name.",
   award,
+  book: {
+    title: "Fabrice’s Big Grooming Day",
+    author: "Michele Stoudt-Wright",
+    series: "Small Dog, Big Lessons: The Fabrice Tales",
+    url: "https://www.amazon.ca/FABRICEs-BIG-GROOMING-DAY-LESSONS-ebook/dp/B0GN8RGD29",
+    illustration: {
+      src: `${import.meta.env.BASE_URL}images/fabrice-grooming-day.webp`,
+      alt: "Book illustration of Fabrice, a fluffy white Bichon, on a grooming table with a smiling pink-haired groomer and the words ‘What a perfect model!’",
+      width: 223,
+      height: 335,
+      credit: "© 2025 Michele Stoudt-Wright",
+    },
+  },
   experience: [
     {
       title: "From bath time to grooming time",
@@ -105,7 +118,7 @@ export const profile = {
       organization: award.event,
       dates: award.year,
       description:
-        "Best First Timer Award, All Other Purebreds, Entry Division. A moment I’m proud of, and encouragement to keep learning.",
+        "Best First Timer Award, All Other Purebreds, Entry Division, for my groom with Fabrice. A moment I’m proud of, and encouragement to keep learning.",
     },
     {
       title: "Building my skills",
@@ -118,10 +131,10 @@ export const profile = {
   photos: [
     {
       ...photoSources("competition-groom"),
-      alt: "A white dog with a rounded fluffy head beside the Best First Timer 2026 ribbon on a competition grooming table.",
-      title: "A competition-day finish.",
+      alt: "Fabrice, a white Bichon Frise with a rounded fluffy head, beside the Best First Timer 2026 ribbon on a competition grooming table.",
+      title: "Fabrice’s big day.",
       description:
-        "My Groom Texas 2026 competition groom, pictured beside the Best First Timer ribbon.",
+        "Fabrice at Groom Texas 2026, pictured beside my Best First Timer ribbon. He’s also the little star of Fabrice’s Big Grooming Day.",
     },
     {
       ...photoSources("pink-bows-groom"),
