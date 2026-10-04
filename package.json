@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "images": "node scripts/prepare-images.mjs",
+    "icons": "node scripts/prepare-icons.mjs",
     "resume": "node scripts/build-resume.mjs",
     "resume:private": "node scripts/build-resume.mjs --private",
     "dev": "npm run resume && vite --host 0.0.0.0",

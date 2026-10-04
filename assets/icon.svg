@@ -1,4 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#0891b2"/>
-  <text x="32" y="32" dy="0.35em" text-anchor="middle" font-family="ui-sans-serif, system-ui, -apple-system, sans-serif" font-size="32" font-weight="600" fill="#ffffff">C</text>
+  <rect width="64" height="64" rx="18" fill="#fff7fa"/>
+  <g transform="translate(12 12)" fill="#a12b63">
+    <ellipse cx="11" cy="14" rx="4" ry="5.5" transform="rotate(-25 11 14)"/>
+    <ellipse cx="20" cy="9" rx="4" ry="5.5"/>
+    <ellipse cx="29" cy="14" rx="4" ry="5.5" transform="rotate(25 29 14)"/>
+    <path d="M9 29c0-4 7-12 11-12s11 8 11 12c0 7-7 3-11 3S9 36 9 29Z"/>
+  </g>
 </svg>
