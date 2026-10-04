@@ -96,7 +96,7 @@ export const profile = {
     title: "Fabrice’s Big Grooming Day",
     author: "Michele Stoudt-Wright",
     series: "Small Dog, Big Lessons: The Fabrice Tales",
-    url: "https://www.amazon.ca/FABRICEs-BIG-GROOMING-DAY-LESSONS-ebook/dp/B0GN8RGD29",
+    url: "https://www.amazon.com/dp/B0GN8RGD29",
     illustration: {
       src: `${import.meta.env.BASE_URL}images/fabrice-grooming-day.webp`,
       alt: "Book illustration of Fabrice, a fluffy white Bichon, on a grooming table with a smiling pink-haired groomer and the words ‘What a perfect model!’",

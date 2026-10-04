@@ -9,4 +9,4 @@ The user requested extracting the pink-haired grooming illustrations and featuri
 
 Both extracted PNGs are kept locally and ignored by Git. Only the optimized, original-size `public/images/fabrice-grooming-day.webp` is published. Keep this illustration in the book feature with its visible copyright credit, separate from Carson’s grooming photographs. The complete PDF is not published.
 
-Book link: https://www.amazon.ca/FABRICEs-BIG-GROOMING-DAY-LESSONS-ebook/dp/B0GN8RGD29
+Book link: https://www.amazon.com/dp/B0GN8RGD29
