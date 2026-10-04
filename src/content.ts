@@ -92,7 +92,7 @@ export const profile = {
   introduction:
     "I’m Carson, a dog groomer with pink hair and a soft spot for animals. This is a collection of my grooming work, along with a little about the dogs and horses in my life.",
   about:
-    "My grooming journey started at Hot Diggity Dog in Rowlett, Texas. Over more than two years in the shop, I’ve grown from primarily washing dogs to taking on more and more grooms. Along the way, I’ve taken grooming courses, earned a “Best First Timer” award at Groom Texas 2026, and built relationships with clients who ask for me by name.",
+    "My grooming journey started at Hot Diggity Dog in Rowlett, Texas, in February 2024. I’ve grown from primarily washing dogs to completing around two grooms a day while helping with the shop’s daily care and customer service. Along the way, I’ve taken grooming courses, earned a “Best First Timer” award at Groom Texas 2026, and built relationships with clients who ask for me by name.",
   award,
   book: {
     title: "Fabrice’s Big Grooming Day",
@@ -111,9 +111,9 @@ export const profile = {
     {
       title: "From bath time to grooming time",
       organization: "Hot Diggity Dog · Rowlett, TX",
-      dates: "HANDS-ON EXPERIENCE",
+      dates: "FEBRUARY 2024 – PRESENT",
       description:
-        "Working primarily as a dog washer, with a growing number of grooms and clients who specifically request me at the shop.",
+        "I average around two grooms a day alongside pre-groom washes, baths, caring for boarding dogs and keeping the shop clean. I’ve also worked the front desk and register.",
     },
     {
       title: `“${award.title}”`,
