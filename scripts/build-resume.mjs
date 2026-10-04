@@ -134,9 +134,11 @@ y += 6;
 text(resume.award.description, { x: margin + 15, width: width - 30 });
 y = awardTop + awardHeight + 14;
 
-heading("Grooming & shop skills");
+heading("Skills & equipment");
 text(`${resume.skills.slice(0, 3).join("  ·  ")}\n${resume.skills.slice(3).join("  ·  ")}`, { lineGap: 3 });
-y += 12;
+y += 4;
+text(resume.equipment);
+y += 10;
 
 heading("Training");
 text(resume.training);
