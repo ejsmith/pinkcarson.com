@@ -8,3 +8,7 @@ dist/
 # Keep full-resolution originals local; publish only optimized, metadata-free copies.
 assets/photos/
 assets/book-illustrations/*.png
+# Generated from content/resume.json during development and production builds.
+public/carson-smith-resume.pdf
+# Application copy and contact details stay local and outside the published assets.
+private/

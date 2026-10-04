@@ -1,0 +1,35 @@
+{
+  "name": "Carson Smith",
+  "role": "Dog Groomer",
+  "portfolioUrl": "https://pinkcarson.com/",
+  "contactUrl": "https://pinkcarson.com/#contact",
+  "summary": "Dog groomer with more than two years of hands-on shop experience and a patient, detail-focused approach. Growing from bathing into grooming, with returning clients who request her by name and a commitment to continuing to learn.",
+  "experience": {
+    "role": "Dog Bather & Groomer",
+    "company": "Hot Diggity Dog",
+    "location": "Rowlett, Texas",
+    "tenure": "More than two years of shop experience",
+    "highlights": [
+      "Progressed from primarily bathing dogs to taking on an increasing number of grooms.",
+      "Brush, comb and shape coats, with careful attention to faces, topknots, ears and legs.",
+      "Add finishing touches such as bows and styled topknots to complement each groom.",
+      "Build relationships with returning clients who specifically request her at the shop."
+    ]
+  },
+  "award": {
+    "title": "Best First Timer Award",
+    "event": "Groom Texas 2026",
+    "division": "All Other Purebreds · Entry Division",
+    "description": "Recognized for grooming Fabrice, a Bichon Frise. His owner, Michele Stoudt-Wright, also wrote Fabrice’s Big Grooming Day about his grooming adventures with Carson."
+  },
+  "skills": [
+    "Bathing & coat preparation",
+    "Brushing & combing",
+    "Scissor finishing",
+    "Coat & face shaping",
+    "Topknots & finishing details",
+    "Client relationships"
+  ],
+  "training": "Has taken several grooming courses to build technique alongside ongoing, hands-on experience in the shop.",
+  "animalExperience": "Has fostered many puppies and cares for her corgi, Beauregard. Riding horses since about age eight, with competition experience and awards in horse jumping."
+}

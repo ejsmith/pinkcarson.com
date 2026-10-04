@@ -70,6 +70,18 @@ The free plan currently allows 250 submissions per month. Monitor its usage in W
 - Public optimized photographs: `public/images/`.
 - Fabrice book feature and Amazon link: `profile.book` in `src/content.ts`. Illustration source and extraction notes: `assets/book-illustrations/README.md`.
 
+## Résumé
+
+The **View my résumé (PDF)** link in Meet Carson opens `/carson-smith-resume.pdf`. It is a one-page, text-selectable PDF with embedded fonts and clickable portfolio and contact links.
+
+Edit confirmed résumé details in `content/resume.json` and the layout in `scripts/build-resume.mjs`. Run `npm run resume` to regenerate the PDF; `npm run dev` and `npm run build` also generate it automatically. The generated PDF is ignored by Git and included in the deployed site. The generator fails if the content exceeds one page, so review the layout after changing the text.
+
+The public copy uses the portfolio’s contact form. For job applications, keep an email in `~/Documents/Carson/Resume/resume-contact.json` (an object with an `email` field) and run `npm run resume:private`. This creates `carson-smith-resume.pdf` in that same local folder, with a clickable email address. Send that file directly to employers. Both files live outside the website project and Git; normal site builds never read or generate the private copy. Do not copy either file into `public/` or `dist/`.
+
+Only add confirmed employment dates, named courses or education. Direct contact details belong in the private copy.
+
+## Photo assets
+
 Originals remain local in the ignored `assets/photos/` directory. Run `npm run images` where those originals are available to generate 640px and 1280px WebP copies. The script applies camera orientation and strips camera/GPS metadata without retouching the photos. GitHub builds use the already-generated web images and do not require originals.
 
 Six grooming photos appear initially; **Show more grooms** reveals the next six. Photographs open in a keyboard-accessible viewer with previous/next navigation and Escape to close. The Groom Texas award portrait retains its full composition and photographer credit.

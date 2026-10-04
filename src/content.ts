@@ -80,7 +80,7 @@ const award = {
 export const profile = {
   name: "Carson",
   role: "Dog groomer & lifelong animal lover",
-  resumeUrl: "",
+  resumeUrl: `${import.meta.env.BASE_URL}carson-smith-resume.pdf`,
   portrait: {
     ...photoSources("carson-and-her-horse", 1242),
     alt: "Carson with pink hair, smiling beside her horse outdoors.",
