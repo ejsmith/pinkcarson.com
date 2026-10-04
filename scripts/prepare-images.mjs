@@ -27,6 +27,15 @@ for (const file of (await readdir(source)).sort()) {
       .toFile(destination);
     outputBytes += info.size;
   }
+  // Use a separate JPEG URL for sharing previews, without relying on a page crop.
+  if (stem === "carson-and-chief-hopper") {
+    const info = await sharp(input)
+      .autoOrient()
+      .resize({ width: 1200, withoutEnlargement: true })
+      .jpeg({ quality: 88, mozjpeg: true })
+      .toFile(join(output, "carson-and-chief-hopper-share.jpg"));
+    outputBytes += info.size;
+  }
 }
 console.log(
   `Prepared responsive photos: ${(sourceBytes / 1024 / 1024).toFixed(1)} MB of originals → ${(outputBytes / 1024 / 1024).toFixed(1)} MB of web images (both sizes combined).`,

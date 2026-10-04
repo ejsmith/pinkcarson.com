@@ -19,7 +19,8 @@ export interface Portrait {
   srcSet?: string;
   alt: string;
   caption: string;
-  framing?: "horse";
+  width: number;
+  height: number;
 }
 
 function photoSources(name: string, width = 1280) {
@@ -82,10 +83,11 @@ export const profile = {
   role: "Dog groomer & lifelong animal lover",
   resumeUrl: `${import.meta.env.BASE_URL}carson-smith-resume.pdf`,
   portrait: {
-    ...photoSources("carson-and-her-horse", 1242),
-    alt: "Carson with pink hair, smiling beside her horse outdoors.",
+    ...photoSources("carson-and-chief-hopper"),
+    alt: "Carson with pink hair, smiling beside her horse Chief Hopper outdoors.",
     caption: "right where I’m happiest.",
-    framing: "horse",
+    width: 1280,
+    height: 1826,
   } as Portrait | null,
   introduction:
     "I’m Carson, a dog groomer with pink hair and a soft spot for animals. This is a collection of my grooming work, along with a little about the dogs and horses in my life.",

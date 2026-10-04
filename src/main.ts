@@ -77,7 +77,7 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
         <a class="hero-secondary" href="#about">A little about me ${heart}</a>
       </div>
       <div class="hero-art ${profile.portrait ? "has-portrait" : ""}">
-        ${profile.portrait ? `<div class="portrait-frame"><div class="portrait-window ${profile.portrait.framing === "horse" ? "portrait-horse" : ""}"><img class="hero-portrait" src="${escape(profile.portrait.src)}" ${profile.portrait.srcSet ? `srcset="${escape(profile.portrait.srcSet)}" sizes="(max-width: 760px) 100vw, 600px"` : ""} alt="${escape(profile.portrait.alt)}" width="1242" height="1770" fetchpriority="high" /></div></div><div class="portrait-mascot">${dogIllustration}<span>Beau ♡</span></div>` : dogIllustration}
+        ${profile.portrait ? `<div class="portrait-frame"><div class="portrait-window"><img class="hero-portrait" src="${escape(profile.portrait.src)}" ${profile.portrait.srcSet ? `srcset="${escape(profile.portrait.srcSet)}" sizes="(max-width: 760px) 100vw, 600px"` : ""} alt="${escape(profile.portrait.alt)}" width="${profile.portrait.width}" height="${profile.portrait.height}" fetchpriority="high" /></div></div><div class="portrait-mascot">${dogIllustration}<span>Beau ♡</span></div>` : dogIllustration}
         <div class="round-stamp" aria-hidden="true"><span>A LITTLE FLUFF</span>${heart}<span>A LOT OF LOVE</span></div>
         <div class="art-note"><span class="note-line" aria-hidden="true">↳</span> ${profile.portrait ? escape(profile.portrait.caption) : "Beauregard, my little sidekick."}</div>
       </div>

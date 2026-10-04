@@ -333,15 +333,6 @@ h1 em:after {
   margin: 0;
   border-radius: 0;
 }
-/* Frame the supplied photo below its birthday banner; preserve the source. */
-.portrait-horse .hero-portrait {
-  position: absolute;
-  max-width: none;
-  width: 135%;
-  height: auto;
-  left: -15%;
-  top: -38%;
-}
 .portrait-mascot {
   position: absolute;
   left: -43px;
