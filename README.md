@@ -26,7 +26,7 @@ Repository: [ejsmith/pinkcarson.com](https://github.com/ejsmith/pinkcarson.com).
 
 Pushing to `main` runs the contact tests, checks TypeScript, builds the site, and deploys `dist/` through GitHub Actions. The Pages publishing source must be **GitHub Actions**. The workflow reads the correct asset base path from GitHub Pages, supporting both the default project URL and the custom domain.
 
-Initial Pages address: https://ericjsmith.dev/pinkcarson.com/ (inherited from the account’s existing Pages domain until `pinkcarson.com` is connected).
+Configured address: https://pinkcarson.com/. GitHub Pages is configured for this domain; its DNS records must point to GitHub before it is reachable.
 
 To connect **pinkcarson.com**:
 
