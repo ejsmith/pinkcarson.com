@@ -26,19 +26,16 @@ Repository: [ejsmith/pinkcarson.com](https://github.com/ejsmith/pinkcarson.com).
 
 Pushing to `main` runs the contact tests, checks TypeScript, builds the site, and deploys `dist/` through GitHub Actions. The Pages publishing source must be **GitHub Actions**. The workflow reads the correct asset base path from GitHub Pages, supporting both the default project URL and the custom domain.
 
-Configured address: https://pinkcarson.com/. GitHub Pages is configured for this domain; its DNS records must point to GitHub before it is reachable.
+Site address: https://pinkcarson.com/. Both the root domain and `www` point to GitHub Pages, with `www` redirecting to the root domain.
 
-To connect **pinkcarson.com**:
+DNS and domain configuration for **pinkcarson.com**:
 
 1. Set `pinkcarson.com` as the custom domain in [Settings → Pages](https://github.com/ejsmith/pinkcarson.com/settings/pages) before pointing DNS at GitHub.
-2. Add these DNS records at the domain’s DNS provider (DNSimple). `@` means the root domain; leave the name blank if the provider uses a blank root name.
+2. DNSimple has the following records, each with a 600-second TTL. `@` means the root domain (a blank name in DNSimple). The ALIAS automatically resolves GitHub’s IPv4 and IPv6 addresses.
 
 | Type | Name | Value |
 | --- | --- | --- |
-| A | @ | 185.199.108.153 |
-| A | @ | 185.199.109.153 |
-| A | @ | 185.199.110.153 |
-| A | @ | 185.199.111.153 |
+| ALIAS | @ | ejsmith.github.io |
 | CNAME | www | ejsmith.github.io |
 
 3. Rerun **Deploy GitHub Pages** to rebuild for the domain’s root path. Once GitHub issues the certificate, enable **Enforce HTTPS** and verify both the root domain and `www` redirect.
