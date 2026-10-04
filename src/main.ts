@@ -123,6 +123,18 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
         <p class="story-series">From <cite>${escape(profile.book.series)}</cite></p>
         <a class="button button-dark story-link" href="${escape(profile.book.url)}" target="_blank" rel="noopener noreferrer" aria-label="Find ${escape(profile.book.title)} on Amazon (opens in a new tab)">Find the book on Amazon ${arrowUp}</a>
       </div>
+      <div class="story-testimonial" id="testimonial">
+        <p class="eyebrow">FROM FABRICE’S FAMILY</p>
+        <figure class="testimonial-feature">
+          <blockquote><p>“${escape(profile.testimonial.excerpt)}”</p></blockquote>
+          <figcaption><strong>${escape(profile.testimonial.author)}</strong><span>${escape(profile.testimonial.attribution)}</span></figcaption>
+        </figure>
+        <details class="testimonial-details">
+          <summary><span class="testimonial-read">Read Michele’s full testimonial</span><span class="testimonial-close">Close full testimonial</span></summary>
+          <blockquote class="testimonial-letter">${profile.testimonial.paragraphs.map((paragraph) => `<p>${escape(paragraph)}</p>`).join("")}</blockquote>
+          <p class="testimonial-signature"><strong>${escape(profile.testimonial.author)}</strong><span>${escape(profile.testimonial.attribution)}</span></p>
+        </details>
+      </div>
     </section>
 
     <section class="approach-section section container" id="approach" aria-labelledby="approach-title">

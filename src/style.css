@@ -41,7 +41,8 @@ button {
   cursor: pointer;
 }
 button:focus-visible,
-a:focus-visible {
+a:focus-visible,
+summary:focus-visible {
   outline: 3px solid #bc653f;
   outline-offset: 6px;
 }
@@ -669,6 +670,67 @@ h2 {
 }
 .story-link {
   margin-top: 24px;
+}
+.story-testimonial {
+  grid-column: 1 / -1;
+  border-top: 1px solid #e8c6d7;
+  padding-top: 32px;
+}
+.testimonial-feature,
+.testimonial-feature blockquote,
+.testimonial-letter {
+  margin: 0;
+}
+.testimonial-feature blockquote {
+  max-width: 930px;
+  margin-top: 20px;
+  font: 400 clamp(23px, 2.5vw, 30px)/1.5 var(--serif);
+  color: var(--berry);
+}
+.testimonial-feature figcaption,
+.testimonial-signature {
+  margin-top: 22px;
+  font-size: 14px;
+  line-height: 1.7;
+}
+.testimonial-feature figcaption span,
+.testimonial-signature span {
+  display: block;
+  color: var(--muted);
+  font-size: 12px;
+}
+.testimonial-details {
+  margin-top: 16px;
+}
+.testimonial-details summary {
+  width: fit-content;
+  max-width: 100%;
+  min-height: 44px;
+  padding-block: 12px;
+  cursor: pointer;
+  color: var(--berry);
+  font-size: 14px;
+  font-weight: 600;
+}
+.testimonial-details summary:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.testimonial-close,
+.testimonial-details[open] .testimonial-read {
+  display: none;
+}
+.testimonial-details[open] .testimonial-close {
+  display: inline;
+}
+.testimonial-letter {
+  max-width: 74ch;
+  margin-top: 16px;
+  font-size: 15px;
+  line-height: 1.9;
+}
+.testimonial-letter p + p {
+  margin-top: 18px;
 }
 .portfolio-section {
   background: #ffedf4;

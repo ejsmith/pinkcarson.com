@@ -107,6 +107,22 @@ export const profile = {
       credit: "© 2025 Michele Stoudt-Wright",
     },
   },
+  testimonial: {
+    author: "Michele Wright",
+    attribution: "Family Friend & Proud Member of Fabrice’s Entourage",
+    excerpt:
+      "Each client is treated as an individual—with patience, affection, and an understanding of what makes that particular dog special. To Carson, they are never simply another appointment on the schedule.",
+    paragraphs: [
+      "I have had the privilege of knowing Carson for more than 10 years, not only as a family friend, but also as someone who has watched her passion for animals grow into a true calling.",
+      "Over the years, I have seen that love begin with horses and expand into the world of dog grooming. Carson started at the bottom rung in a grooming salon, willing to learn, work hard, and develop her craft. Through determination, talent, and a genuine love for animals, she continues to grow as a groomer, earning recognition and awards along the way as she works toward becoming the accomplished professional she aspires to be.",
+      "What makes Carson special, however, goes far beyond her growing skill with a pair of grooming shears. She truly loves the animals entrusted to her care. Each client is treated as an individual—with patience, affection, and an understanding of what makes that particular dog special. To Carson, they are never simply another appointment on the schedule.",
+      "And then there is Fabrice.",
+      "Fabrice has always loved going to Carson for his grooming, and he holds a special place in her journey. In his own way, he became part of the inspiration behind Carson’s decision to pursue grooming as a career. Their relationship has given us some wonderful memories—some of which have even become part of the “Fabrice Tales.”",
+      "Watching Carson take something she genuinely loves and steadily build it into her chosen profession has been a joy. She continues to learn, grow, and challenge herself while never losing the heart and compassion that started her on this journey.",
+      "And if you know Carson, you also know one other thing: she loves PINK! It is more than a favorite color—it is part of the energy, fun, warmth, and personality she brings to everything she does.",
+      "I am proud of Carson, proud of the groomer she is becoming, and most importantly, proud of the loving care she gives to every animal fortunate enough to become one of her clients.",
+    ],
+  },
   experience: [
     {
       title: "From bath time to grooming time",
