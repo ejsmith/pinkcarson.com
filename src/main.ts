@@ -33,6 +33,7 @@ const escape = (value: string) =>
   );
 
 const name = escape(profile.name);
+const homeUrl = escape(import.meta.env.BASE_URL);
 const detailPhotos = [
   ...profile.photos,
   profile.award.photo,
@@ -56,7 +57,7 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="wordmark" href="#home" aria-label="${name}, home">${paw}<span>${name}<span class="wordmark-dot">.</span></span></a>
+      <a class="wordmark" href="${homeUrl}" aria-label="${name}, home">${paw}<span>${name}<span class="wordmark-dot">.</span></span></a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav"><span class="menu-label">Menu</span><span class="menu-lines" aria-hidden="true"></span></button>
       <nav class="main-nav" id="main-nav" aria-label="Main navigation">
         <a href="#portfolio">Portfolio</a>
@@ -148,7 +149,7 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
 
     <section class="contact-section" id="contact" aria-labelledby="contact-title"><div class="container contact-inner"><div class="contact-copy"><p class="eyebrow">GET IN TOUCH</p><h2 id="contact-title">Leave me<br><em>a little note.</em></h2><p>If you have a question about my work or would like to get in touch, you’re welcome to send me a message here.</p><div class="contact-doodle" aria-hidden="true">${paw}<span>thanks for stopping by.</span>${star}</div></div><form class="contact-form" id="contact-form"><div class="form-row"><div class="form-field"><label for="contact-name">Your name <span aria-hidden="true">*</span></label><input id="contact-name" name="name" autocomplete="name" required maxlength="100" placeholder="Your name" /></div><div class="form-field"><label for="contact-email">Email address <span aria-hidden="true">*</span></label><input id="contact-email" type="email" name="email" autocomplete="email" required maxlength="254" placeholder="you@example.com" /></div></div><div class="form-field"><label for="contact-shop">Shop or business <span class="optional">(optional)</span></label><input id="contact-shop" name="business" autocomplete="organization" maxlength="150" placeholder="If applicable" /></div><div class="form-field"><label for="contact-message">Your message <span aria-hidden="true">*</span></label><textarea id="contact-message" name="message" required minlength="20" maxlength="5000" rows="4" placeholder="Hi Carson…"></textarea></div><div class="form-trap" aria-hidden="true"><label for="contact-website">Leave this field empty</label><input id="contact-website" name="website" tabindex="-1" autocomplete="off" /></div><div class="form-captcha" id="contact-captcha"></div><button class="button button-light" type="submit" disabled>Send message ${heart}</button><p class="form-status" id="form-status" role="status" aria-live="polite">Checking message availability…</p><p class="form-note">Your message is delivered through <a href="https://web3forms.com/privacy" target="_blank" rel="noopener">Web3Forms</a>. Your details are used to respond to your note.</p></form></div></section>
   </main>
-  <footer class="site-footer container"><a class="wordmark" href="#home" aria-label="Back to top">${paw}<span>${name}<span class="wordmark-dot">.</span></span></a><p>Pink hair. Happy dogs. A whole lot of heart.</p><span class="copyright">© ${new Date().getFullYear()} ${name}</span></footer>
+  <footer class="site-footer container"><a class="wordmark" href="${homeUrl}" aria-label="Back to top">${paw}<span>${name}<span class="wordmark-dot">.</span></span></a><p>Pink hair. Happy dogs. A whole lot of heart.</p><span class="copyright">© ${new Date().getFullYear()} ${name}</span></footer>
   <dialog class="photo-dialog" aria-labelledby="photo-title"><button class="dialog-close" type="button" aria-label="Close photo">✕</button><img class="dialog-image" alt="" /><div class="dialog-controls"><button class="dialog-previous" type="button" aria-label="Previous photo">${arrow}</button><span class="dialog-count" aria-live="polite"></span><button class="dialog-next" type="button" aria-label="Next photo">${arrow}</button></div><div class="dialog-caption"><h3 id="photo-title"></h3><p></p></div></dialog>
 `;
 
@@ -172,6 +173,15 @@ navigation.querySelectorAll("a").forEach((link) =>
       target.setAttribute("tabindex", "-1");
       target.focus({ preventScroll: true });
     }
+  }),
+);
+document.querySelectorAll<HTMLAnchorElement>(".wordmark").forEach((link) =>
+  link.addEventListener("click", (event) => {
+    if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    event.preventDefault();
+    closeMenu();
+    if (location.hash) history.pushState(null, "", link.href);
+    window.scrollTo(0, 0);
   }),
 );
 document.addEventListener("keydown", (event) => {
