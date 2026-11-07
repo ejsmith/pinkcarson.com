@@ -1,0 +1,213 @@
+/* Chief Hopper's last day: a private gallery page built from the site's own theme. */
+
+.hopper-home {
+  margin-left: 0;
+  font-size: 13px;
+  font-weight: 500;
+  gap: 12px;
+}
+.hopper-home svg {
+  width: 18px;
+  height: 18px;
+}
+
+.hopper-hero {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  align-items: center;
+  gap: 56px;
+  padding-block: 64px 84px;
+}
+.hopper-hero h1 em {
+  white-space: nowrap;
+}
+.hopper-hero .hero-description {
+  margin-top: 26px;
+}
+.hopper-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 16px;
+  font-size: 12px;
+  color: #94637f;
+}
+.hopper-meta svg {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+  transform: rotate(12deg);
+}
+.hopper-hero-photo {
+  margin: 0;
+  position: relative;
+}
+.hopper-hero-button {
+  border-radius: 26px 90px 26px 26px;
+  box-shadow: 0 22px 50px -28px #a12b6380;
+}
+.hopper-hero-button > img {
+  aspect-ratio: auto;
+  height: auto;
+  object-fit: cover;
+}
+.hopper-hero-photo figcaption {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 18px;
+  margin-left: 18px;
+  font: italic 18px var(--serif);
+  color: #a5567a;
+  transform: rotate(-2deg);
+}
+
+/* Chapter strip: same scalloped band as the home page, wrapping to fit nine chapters. */
+.hopper-chapters .values-strip-inner {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 18px;
+}
+.hopper-chapters a {
+  font-family: var(--serif);
+  font-size: 16px;
+  white-space: nowrap;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+.hopper-chapters a:hover {
+  color: var(--berry);
+  border-bottom-color: #d89abb;
+}
+
+.hopper-chapter {
+  padding-block: 84px 0;
+}
+.hopper-chapter .eyebrow {
+  color: #9d4470;
+  font-variant-numeric: tabular-nums;
+}
+.hopper-grid {
+  columns: 3 280px;
+  column-gap: 16px;
+  margin-top: 38px;
+}
+.hopper-photo {
+  margin-bottom: 16px;
+  break-inside: avoid;
+}
+.hopper-photo > img {
+  aspect-ratio: auto;
+  height: auto;
+  object-fit: cover;
+}
+.hopper-photo .photo-expand,
+.hopper-hero-button .photo-expand {
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.2s, transform 0.2s;
+}
+.hopper-photo:hover .photo-expand,
+.hopper-photo:focus-visible .photo-expand,
+.hopper-hero-button:hover .photo-expand,
+.hopper-hero-button:focus-visible .photo-expand {
+  opacity: 1;
+  transform: none;
+}
+
+.hopper-closing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding-block: 110px 90px;
+  text-align: center;
+}
+.hopper-signoff {
+  font: italic 400 clamp(30px, 3.4vw, 42px) / 1.25 var(--serif);
+  letter-spacing: -1px;
+  color: var(--berry);
+}
+.hopper-signoff-mark svg {
+  width: 30px;
+  height: 30px;
+  color: #d96296;
+  transform: rotate(-8deg);
+}
+
+/* Wider viewer than the grooming portfolio: many of these photos are landscape. */
+.hopper-dialog {
+  width: min(1040px, calc(100% - 32px));
+}
+.hopper-dialog .dialog-image {
+  height: 68dvh;
+  max-height: 72dvh;
+}
+.hopper-dialog .dialog-caption {
+  padding: 18px 24px 22px;
+}
+.hopper-dialog .dialog-caption h3 {
+  font-size: 23px;
+}
+.hopper-dialog .dialog-caption p {
+  margin-top: 4px;
+  font-size: 13px;
+}
+
+@media (max-width: 1050px) {
+  .hopper-hero {
+    gap: 36px;
+  }
+}
+@media (max-width: 760px) {
+  .hopper-home {
+    padding: 11px 14px;
+    font-size: 12px;
+  }
+  .hopper-hero {
+    grid-template-columns: 1fr;
+    padding-block: 36px 56px;
+    gap: 34px;
+  }
+  .hopper-hero-button {
+    border-radius: 18px 56px 18px 18px;
+  }
+  .hopper-chapters .values-strip-inner {
+    display: flex;
+    gap: 10px 14px;
+  }
+  .hopper-chapters a {
+    font-size: 14px;
+  }
+  .hopper-chapters svg:nth-child(4) {
+    display: block;
+  }
+  .hopper-chapter {
+    padding-top: 60px;
+  }
+  .hopper-grid {
+    columns: 2 150px;
+    column-gap: 10px;
+    margin-top: 26px;
+  }
+  .hopper-photo {
+    margin-bottom: 10px;
+  }
+  .hopper-photo .photo-expand {
+    display: none;
+  }
+  .hopper-dialog .dialog-image {
+    height: 56dvh;
+  }
+}
+@media (max-width: 420px) {
+  .hopper-home {
+    font-size: 0;
+    gap: 0;
+    padding: 12px;
+  }
+  .hopper-home svg {
+    width: 20px;
+    height: 20px;
+  }
+}
